@@ -17,12 +17,14 @@ export default function App() {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="md:mx-40 mx-4 my-6 mt-0 font-kanit text-white">
-      <nav className="flex w-full justify-between items-center">
-        <img
-          src="https://ik.imagekit.io/7saglhzb5/Brandroot%20media.png?updatedAt=1716214538239"
-          alt="GrowthRocketLogo"
-          className="h-14 w-14"
-        />
+      <nav className="flex w-full mt-4 justify-between items-center">
+        <a href="/">
+          <img
+            src="https://ik.imagekit.io/7saglhzb5/Brandroot%20media.png?updatedAt=1716214538239"
+            alt="GrowthRocketLogo"
+            className="h-18 w-16"
+          />
+        </a>
         {screenSize !== "small" ? (
           <div className="flex justify-between gap-8 text-[22px] items-center">
             <a href="#portfolio">Portfolio</a>

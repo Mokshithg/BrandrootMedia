@@ -27,7 +27,7 @@ export default function Results() {
       />
 
       </div>
-      <div className="md:w-[71%] w-full relative md:left-96">
+      <div className="md:w-[71%] w-full relative ml-4 md:left-96 md:-ml-12 mx-auto">
         <TiltCard
           image={
             "https://ik.imagekit.io/7saglhzb5/brandroot/simon%20gee.png?updatedAt=1716364699598"
