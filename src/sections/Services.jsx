@@ -67,76 +67,81 @@ export default function Services() {
       <h1 className="text-4xl md:text-[55px] font-kanit tracking-tight leading-[35px] md:leading-[60px]">
         Here's what <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>we will do for you</LinearGradient>
       </h1>
-      <div className="flex gap-20 my-4 mt-16 gap-x-40 gap-y-40 px-8 md:px-0 ">
-        <Swiper
-          loop={true}
-          slidesPerView={4}
-          centeredSlides={false}
-          slidesPerGroupSkip={1}
-          grabCursor={true}
-          keyboard={{
-            enabled: true,
-          }}
-          autoplay={{
-            delay: 3500, // specify autoplay delay in milliseconds
-            disableOnInteraction: true, // enable autoplay even after user interaction
-          }}
-          breakpoints={{
-            769: {
-              slidesPerView: 3,
-              slidesPerGroup: 1,
-            },
-          }}
+      <div className="flex gap-20 my-4 mt-16 gap-x-40 gap-y-40 px-4 md:px-8">
+          <Swiper
+            loop={true}
+            slidesPerView={4}
+            centeredSlides={false}
+            slidesPerGroupSkip={1}
+            grabCursor={true}
+            keyboard={{
+              enabled: true,
+            }}
+            autoplay={{
+              delay: 2000, // specify autoplay delay in milliseconds
+              disableOnInteraction: true, // enable autoplay even after user interaction
+            }}
+            breakpoints={{
+              769: {
+                slidesPerView: 3,
+                slidesPerGroup: 1,
+              },
+              520: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+              },
+            }}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
-          spaceBetween={75}
-          modules={[Keyboard, Navigation, Autoplay]}
-          className="mySwiper px-30 py-10"
-        >
-        {more_cards.map((e, i) => (
-          <SwiperSlide key={i} className="p-4">
-            <ServiceCard
-              key={i}
-              h={e.h}
-              p={e.p}
-              className="flex justify-center items-center w-20 h-20 mx-2"
-              autoPlay
-              muted
-            controls
-          />
-        </SwiperSlide>
-        ))}
-        <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
-        <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div>
-      </Swiper>
+            spaceBetween={75}
+            modules={[Keyboard, Navigation, Autoplay]}
+            className="mySwiper px-30 py-10"
+          >
+            {more_cards.map((e, i) => (
+              <SwiperSlide key={i} className="">
+                <ServiceCard
+                  key={i}
+                  h={e.h}
+                  p={e.p}
+                  className="flex justify-center items-center w-full h-full mx-2"
+                  autoPlay
+                  muted
+                  controls
+                />
+              </SwiperSlide>
+            ))}
+            <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
+            <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div>
+          </Swiper>
+        </div>
 
-       </div>
-      <div className="my-36" id="clientwords">
-        <h1 className="text-3xl md:text-[55px] font-kanit tracking-tight  md:leading-[60px] mb-7 md:mb-17">
+          <div className="my-36" id="clientwords">
+        <h1 className="text-3xl md:text-[55px] font-kanit tracking-tight md:leading-[60px] mb-7 md:mb-17">
           Hear from our{" "}
-          <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>
+          <LinearGradient gradient={["to right", "#fdde00,#ffffff"]}>
             Happy Clients
-          </LinearGradient>{" "}
+          </LinearGradient>{" "}    
         </h1>
         <Swiper>
-        <div className="flex flex-wrap justify-around gap-4 p-4">
-          <div className="grid grid-cols-3 gap-4">
-            {clients.map((client, index) => (
-              <ClientCard
-                key={index}
-                img={client.img}
-                vid={client.vid}
-                p={client.p}
-                name={client.name}
-                comp={client.comp}
-              />
-            ))}
+          <div className="flex flex-wrap justify-around gap-4 p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {clients.map((client, index) => (
+                <ClientCard
+                  key={index}
+                  img={client.img}
+                  vid={client.vid}
+                  p={client.p}
+                  name={client.name}
+                  comp={client.comp}
+                />
+              ))}
             </div>
-        </div>
+          </div>
         </Swiper>
-      </div>
+    </div>
+
     </div>
   );
 }

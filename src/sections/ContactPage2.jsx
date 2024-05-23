@@ -19,7 +19,7 @@ export default function ContactPage() {
           <h1 className="text-3xl font-kanit my-8">
             Meet{" "}
             <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
-              The Co-Founder
+            Founders
             </LinearGradient>
           </h1>
         ) : null}
@@ -35,7 +35,7 @@ export default function ContactPage() {
             className="w-[65vh] h-[70vh] rounded-xl object-cover"
           />
         </TwoCardsEffect>
-        <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 py-2 absolute bottom-[500px] md:bottom-[540px] w-fit md:right-56 right-[160px] text-black font-kanit -rotate-[5deg] rounded-xl px-10 text-sm md:text-[16px] whitespace-nowrap right-0 left-0">
+        <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 py-2 absolute sm:bottom-[890px] bottom-[500px] md:bottom-[540px] w-fit md:right-56 right-[160px] text-black font-kanit -rotate-[5deg] rounded-xl px-10 text-sm md:text-[16px] whitespace-nowrap right-0 left-0">
           <h1>Nithish Malhotra</h1>
           {/* <div className="flex justify-center mt-2">
             <i className="fas fa-youtube mr-2"></i>

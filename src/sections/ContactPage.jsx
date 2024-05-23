@@ -2,25 +2,27 @@ import TwoCardsEffect from "../components/TwoCardsEffect";
 import { LinearGradient } from "react-text-gradients";
 import useScreenSize from "../utils/screenSize";
 
-
 export default function ContactPage() {
   const screenSize = useScreenSize();
   return (
-    <div id="contactpage" className="flex md:flex-row flex-col md:items-center justify-between md:gap-20 gap-5 items-center -mt-8">
+    <div
+      id="contactpage"
+      className="flex md:flex-row flex-col md:items-center justify-between md:gap-20 gap-5 items-center -mt-8"
+    >
       {screenSize === "small" ? (
         <h1 className="text-3xl font-kanit my-0">
           Meet{" "}
-        <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
-            The Co-Founder
-          </LinearGradient> 
+          <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
+          Founder
+          </LinearGradient>
         </h1>
       ) : null}
       <div className="p-2 relative">
-      {screenSize === "large" || screenSize === "medium" ? (
+        {screenSize === "large" || screenSize === "medium" ? (
           <h1 className="text-3xl font-medium my-8">
             Meet{" "}
             <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
-              The Co-Founder
+              Founders
             </LinearGradient>
           </h1>
         ) : null}
@@ -37,7 +39,7 @@ export default function ContactPage() {
             className="w-[65vh] h-[70vh] rounded-xl object-cover"
           />
         </TwoCardsEffect>
-        <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 py-2 absolute bottom-[500px] md:bottom-[540px] w-fit md:right-56 right-[160px] text-black font-kanit -rotate-[5deg] rounded-xl px-10 text-sm md:text-[16px] whitespace-nowrap right-0 left-0">
+        <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 py-2 absolute sm:bottom-[890px] bottom-[500px] md:bottom-[540px] w-fit md:right-56 right-[160px] text-black font-kanit -rotate-[5deg] rounded-xl px-10 text-sm md:text-[16px] whitespace-nowrap right-0 left-0">
           <h1>Abhu Talha</h1>
           <div className="flex justify-between items-center">
             <a href="">
@@ -60,39 +62,39 @@ export default function ContactPage() {
             <div>
               <i className="fab fa-linkedin-in"></i>
             </div>
-              <a href="">
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  viewBox="0 0 1024 1024"
-                  className="text-xl"
-                  height={
-                    screenSize === "large" || screenSize === "medium"
-                      ? "1.5em"
-                      : "1em"
-                  }
-                  width="1.5em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M960 509.2c0-2.2 0-4.7-.1-7.6-.1-8.1-.3-17.2-.5-26.9-.8-27.9-2.2-55.7-4.4-81.9-3-36.1-7.4-66.2-13.4-88.8a139.52 139.52 0 0 0-98.3-98.5c-28.3-7.6-83.7-12.3-161.7-15.2-37.1-1.4-76.8-2.3-116.5-2.8-13.9-.2-26.8-.3-38.4-.4h-29.4c-11.6.1-24.5.2-38.4.4-39.7.5-79.4 1.4-116.5 2.8-78 3-133.5 7.7-161.7 15.2A139.35 139.35 0 0 0 82.4 304C76.3 326.6 72 356.7 69 392.8c-2.2 26.2-3.6 54-4.4 81.9-.3 9.7-.4 18.8-.5 26.9 0 2.9-.1 5.4-.1 7.6v5.6c0 2.2 0 4.7.1 7.6.1 8.1.3 17.2.5 26.9.8 27.9 2.2 55.7 4.4 81.9 3 36.1 7.4 66.2 13.4 88.8 12.8 47.9 50.4 85.7 98.3 98.5 28.2 7.6 83.7 12.3 161.7 15.2 37.1 1.4 76.8 2.3 116.5 2.8 13.9.2 26.8.3 38.4.4h29.4c11.6-.1 24.5-.2 38.4-.4 39.7-.5 79.4-1.4 116.5-2.8 78-3 133.5-7.7 161.7-15.2 47.9-12.8 85.5-50.5 98.3-98.5 6.1-22.6 10.4-52.7 13.4-88.8 2.2-26.2 3.6-54 4.4-81.9.3-9.7.4-18.8.5-26.9 0-2.9.1-5.4.1-7.6v-5.6zm-72 5.2c0 2.1 0 4.4-.1 7.1-.1 7.8-.3 16.4-.5 25.7-.7 26.6-2.1 53.2-4.2 77.9-2.7 32.2-6.5 58.6-11.2 76.3-6.2 23.1-24.4 41.4-47.4 47.5-21 5.6-73.9 10.1-145.8 12.8-36.4 1.4-75.6 2.3-114.7 2.8-13.7.2-26.4.3-37.8.3h-28.6l-37.8-.3c-39.1-.5-78.2-1.4-114.7-2.8-71.9-2.8-124.9-7.2-145.8-12.8-23-6.2-41.2-24.4-47.4-47.5-4.7-17.7-8.5-44.1-11.2-76.3-2.1-24.7-3.4-51.3-4.2-77.9-.3-9.3-.4-18-.5-25.7 0-2.7-.1-5.1-.1-7.1v-4.8c0-2.1 0-4.4.1-7.1.1-7.8.3-16.4.5-25.7.7-26.6 2.1-53.2 4.2-77.9 2.7-32.2 6.5-58.6 11.2-76.3 6.2-23.1 24.4-41.4 47.4-47.5 21-5.6 73.9-10.1 145.8-12.8 36.4-1.4 75.6-2.3 114.7-2.8 13.7-.2 26.4-.3 37.8-.3h28.6l37.8.3c39.1.5 78.2 1.4 114.7 2.8 71.9 2.8 124.9 7.2 145.8 12.8 23 6.2 41.2 24.4 47.4 47.5 4.7 17.7 8.5 44.1 11.2 76.3 2.1 24.7 3.4 51.3 4.2 77.9.3 9.3.4 18 .5 25.7 0 2.7.1 5.1.1 7.1v4.8zM423 646l232-135-232-133z"></path>
-                </svg>
-              </a>
+            <a href="">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                viewBox="0 0 1024 1024"
+                className="text-xl"
+                height={
+                  screenSize === "large" || screenSize === "medium"
+                    ? "1.5em"
+                    : "1em"
+                }
+                width="1.5em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M960 509.2c0-2.2 0-4.7-.1-7.6-.1-8.1-.3-17.2-.5-26.9-.8-27.9-2.2-55.7-4.4-81.9-3-36.1-7.4-66.2-13.4-88.8a139.52 139.52 0 0 0-98.3-98.5c-28.3-7.6-83.7-12.3-161.7-15.2-37.1-1.4-76.8-2.3-116.5-2.8-13.9-.2-26.8-.3-38.4-.4h-29.4c-11.6.1-24.5.2-38.4.4-39.7.5-79.4 1.4-116.5 2.8-78 3-133.5 7.7-161.7 15.2A139.35 139.35 0 0 0 82.4 304C76.3 326.6 72 356.7 69 392.8c-2.2 26.2-3.6 54-4.4 81.9-.3 9.7-.4 18.8-.5 26.9 0 2.9-.1 5.4-.1 7.6v5.6c0 2.2 0 4.7.1 7.6.1 8.1.3 17.2.5 26.9.8 27.9 2.2 55.7 4.4 81.9 3 36.1 7.4 66.2 13.4 88.8 12.8 47.9 50.4 85.7 98.3 98.5 28.2 7.6 83.7 12.3 161.7 15.2 37.1 1.4 76.8 2.3 116.5 2.8 13.9.2 26.8.3 38.4.4h29.4c11.6-.1 24.5-.2 38.4-.4 39.7-.5 79.4-1.4 116.5-2.8 78-3 133.5-7.7 161.7-15.2 47.9-12.8 85.5-50.5 98.3-98.5 6.1-22.6 10.4-52.7 13.4-88.8 2.2-26.2 3.6-54 4.4-81.9.3-9.7.4-18.8.5-26.9 0-2.9.1-5.4.1-7.6v-5.6zm-72 5.2c0 2.1 0 4.4-.1 7.1-.1 7.8-.3 16.4-.5 25.7-.7 26.6-2.1 53.2-4.2 77.9-2.7 32.2-6.5 58.6-11.2 76.3-6.2 23.1-24.4 41.4-47.4 47.5-21 5.6-73.9 10.1-145.8 12.8-36.4 1.4-75.6 2.3-114.7 2.8-13.7.2-26.4.3-37.8.3h-28.6l-37.8-.3c-39.1-.5-78.2-1.4-114.7-2.8-71.9-2.8-124.9-7.2-145.8-12.8-23-6.2-41.2-24.4-47.4-47.5-4.7-17.7-8.5-44.1-11.2-76.3-2.1-24.7-3.4-51.3-4.2-77.9-.3-9.3-.4-18-.5-25.7 0-2.7-.1-5.1-.1-7.1v-4.8c0-2.1 0-4.4.1-7.1.1-7.8.3-16.4.5-25.7.7-26.6 2.1-53.2 4.2-77.9 2.7-32.2 6.5-58.6 11.2-76.3 6.2-23.1 24.4-41.4 47.4-47.5 21-5.6 73.9-10.1 145.8-12.8 36.4-1.4 75.6-2.3 114.7-2.8 13.7-.2 26.4-.3 37.8-.3h28.6l37.8.3c39.1.5 78.2 1.4 114.7 2.8 71.9 2.8 124.9 7.2 145.8 12.8 23 6.2 41.2 24.4 47.4 47.5 4.7 17.7 8.5 44.1 11.2 76.3 2.1 24.7 3.4 51.3 4.2 77.9.3 9.3.4 18 .5 25.7 0 2.7.1 5.1.1 7.1v4.8zM423 646l232-135-232-133z"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
 
       <div className="md:w-[100vh]">
-        <h1 className="text-5xl md:text-4xl font-medium my-4">
-        Abu Talha
-        </h1>
+        <h1 className="text-5xl md:text-4xl font-medium my-4">Abu Talha</h1>
         <p className="text-2xl md:text-xl -mt-4 text-white-400 font-kanit">
           250,000+ Youtube | 150,000+ Instagram
         </p>
         <p className="text-[20px] md:text-2xl my-4 md:my-10 font-light mb-56 md:mb-48">
-        As an entrepreneur and content creator, Ayushman has a passion for creating exceptional content that resonates with audiences. His journey began in February 2021 when he started making finance videos on YouTube for India's youth.
+          As an entrepreneur and content creator, Ayushman has a passion for
+          creating exceptional content that resonates with audiences. His
+          journey began in February 2021 when he started making finance videos
+          on YouTube for India's youth.
         </p>
       </div>
     </div>
-    
   );
 }
