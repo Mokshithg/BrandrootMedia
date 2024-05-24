@@ -28,7 +28,7 @@ export default function App() {
         {screenSize !== "small" ? (
           <div className="flex justify-between gap-8 text-[22px] items-center">
             <a href="#portfolio">Portfolio</a>
-            <a href="#testimonials">Testimonials</a>
+            <a href="#results">Testimonials</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
           </div>
@@ -47,7 +47,7 @@ export default function App() {
             alt=""
           />
           <a href="#portfolio">Portfolio</a>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#results">Testimonials</a>
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>
           

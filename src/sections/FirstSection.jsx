@@ -10,19 +10,19 @@ import { Keyboard, Navigation, Autoplay } from "swiper/modules";
 
 const images = {
   1: [
-    "https://growthrocket.media/_next/image?url=%2F01.jpg&w=1920&q=75",
-    "https://growthrocket.media/_next/image?url=%2F02.jpg&w=1920&q=75", 
-    "https://growthrocket.media/_next/image?url=%2F03.JPG&w=1920&q=75",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/Siddharth%20Bhat.png?updatedAt=1716364700298",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/lebo.png?updatedAt=1716364700368", 
+    "https://ik.imagekit.io/7saglhzb5/brandroot/mad%20over%20growth.png?updatedAt=1716364700301",
   ],
   2: [
-    "https://growthrocket.media/_next/image?url=%2F04.JPG&w=1920&q=75",
-    "https://growthrocket.media/_next/image?url=%2F05.jpeg&w=1920&q=75",
-    "https://growthrocket.media/_next/image?url=%2F06.jpeg&w=1920&q=75",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/gogo%20bethke.png?updatedAt=1716364700453",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/cindy%20lish.png?updatedAt=1716364700301",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/benjamin%20seda.png?updatedAt=1716364700217",
   ],
   3: [
-    "https://growthrocket.media/_next/image?url=%2F06.jpg&w=1920&q=75",
-    "https://growthrocket.media/_next/image?url=%2F08.JPG&w=1920&q=75",
-    "https://growthrocket.media/_next/image?url=%2F07.jpeg&w=1920&q=75",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/benjamin%20seda.png?updatedAt=1716364700217",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/benjamin%20Tarrolly.png?updatedAt=1716364700114",
+    "https://ik.imagekit.io/7saglhzb5/brandroot/simon%20gee.png?updatedAt=1716364699598",
   ],
 };
 
@@ -136,14 +136,14 @@ export default function FirstSection() {
             return (
               <SwiperSlide key={index} className="">
                 <a href={channelLink} target="_blank" rel="noopener noreferrer">
-                  <img src={brand.url} className="h-44 w-44 object-contain mb-4" alt="" />
-                  <p className="brand-name absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-black text-lg">{brand.name}</p>
+                  <img src={brand.url} className="h-44 w-44 object-contain mb-4" alt="" title={brand.name} />
+                  {/* <span className="hidden"data-name={brand.name}>{brand.name}</span>  */}
                 </a>
               </SwiperSlide>
             );
           })}
-          <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
-          <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div>
+          <div className="swiper-button-next text-slate-100 animate-bounce-left" style={{ color: 'black' }}></div>
+          <div className="swiper-button-prev text-slate-100 animate-bounce-right btn-black" style={{ color: 'black' }}></div>
           </Swiper>
         </TwoCardsEffect>
       </div> 

@@ -13,27 +13,39 @@ export default function Footer() {
           Chat On Whatsapp
         </button>
       </div>
-      <div className="w-screen relative right- bg-gradient-to-br from-yellow-500 to-yellow-600 flex py-8 items-center h-16 md:h-full justify-center gap-20 ">
-       <a href="https://www.linkedin.com/company/brandrootmedia/">
-        <img
-          src="https://growthrocket.media/_next/image?url=%2Flinkedin.png&w=48&q=75"
-          alt=""
-        />
-        </a>
-        <a href="">
-        <img
-          src="https://growthrocket.media/_next/image?url=%2Fyoutube.png&w=48&q=75"
-          alt=""
-        />
-        </a>
-        <a href="https://www.instagram.com/brandrootmedia/?igshid=NzZlODBkYWE4Ng%3D%3D">
-        <img
-          src="https://growthrocket.media/_next/image?url=%2Finstagram.png&w=48&q=75"
-          alt=""
-        />
+      <div className="w-screen relative right- bg-gradient-to-br from-yellow-500 to-yellow-600 flex py-4 items-start h-12 md:h-full justify-between gap-20">
+        {/* Social Media Icons */}
+        <div className="flex gap-4">
+          <a href="https://www.linkedin.com/company/brandrootmedia/" className="ml-48">
+            <img
+              src="https://growthrocket.media/_next/image?url=%2Flinkedin.png&w=48&q=75"
+              alt=""
+            />
+          </a>
+          <a href="" className="ml-8 mt-1">
+            <img
+              src="https://growthrocket.media/_next/image?url=%2Fyoutube.png&w=48&q=75"
+              alt=""
+            />
+          </a>
+          <a href="https://www.instagram.com/brandrootmedia/?igshid=NzZlODBkYWE4Ng%3D%3D" className="ml-8 mt-1">
+            <img
+              src="https://growthrocket.media/_next/image?url=%2Finstagram.png&w=48&q=75"
+              alt=""
+            />
+          </a>
+        </div>
+
+        {/* Logo */}
+        <a href="/" className="mr-48">
+          <img
+            src="https://ik.imagekit.io/7saglhzb5/Brandroot%20media.png?updatedAt=1716214538239"
+            alt="Brandroot Media Logo"
+            className="h-16 w-auto" // Increased height and width
+          />
         </a>
       </div>
-      <p className="my-2">BrandRoot Media &copy; 2024. All Rights Reserved</p>
+      <p className="">BrandRoot Media &copy; 2024. All Rights Reserved</p>
     </div>
   );
 }

@@ -23,10 +23,10 @@ export default function ClientCard({ img, p, name, comp, vid }) {
           )}
         </div>
         {/* Adjusted positioning */}
-        <div className="absolute bottom-3 right-[12px] w-full text-right">
+        <div className="absolute bottom-3 right-[44px] w-full text-right">
           <h1 className="text-2xl md:text-2xl font-kanit text-black">
             <LinearGradient gradient={["to bottom", "#000000,#000000"]}>
-              {name}
+              - {name}
             </LinearGradient>
           </h1>
           <p className="text-xl md:text-[15px] text-black-500">{comp}</p>

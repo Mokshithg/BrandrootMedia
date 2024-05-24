@@ -51,7 +51,7 @@ const clients = [
     img: "https://ik.imagekit.io/7saglhzb5/brandroot/lebo.png?updatedAt=1716364700368",
     p: "BrandRoot Media specializes in crafting compelling digital experiences, leveraging cutting-edge technology to deliver high-quality web solutions that drive business growth and enhance customer engagement.",
     name: "Lebo",
-    vid : "https://ik.imagekit.io/7saglhzb5/Brandroot-testimonial%20by%20Lebo%20(1).mp4?updatedAt=1716366013248"
+    // vid : "https://ik.imagekit.io/7saglhzb5/Brandroot-testimonial%20by%20Lebo%20(1).mp4?updatedAt=1716366013248"
 
   },
   {

@@ -4,7 +4,7 @@ import TiltCard from "../components/TiltCard";
 
 export default function Results() {
   return (
-    <div className="mx-5 my-64 mt-8">
+    <div className="mx-5 my-64 mt-8" id="results">
       <h1 className="text-[50px] font-kanit tracking-tight leading-[60px] mt-36 mb-14">
       Success Stories: Brands Thriving with{" "}
         <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>
@@ -22,7 +22,7 @@ export default function Results() {
         cta={"Contact Brandroot Media today for a free consultation."}
         imgStyle={"w-full h-auto object-contain md:h-[165px] sm:h-[100%] sm:w-[60%]"}
         imgContainerStyle={
-          "bg-[#ecc86c] h-44 md:w-half sm:h-[100%] sm:w-[50%] w-[85%] m-3 md:m-0 flex justify-center items-center p-1 rounded-md"
+          "h-44 md:w-half sm:h-[100%] sm:w-[50%] w-[85%] m-3 md:m-0 flex justify-center items-center p-1 rounded-md"
         }
       />
 
@@ -38,7 +38,7 @@ export default function Results() {
           }
           imgStyle={"w-full h-auto md:h-[165px] h-fit object-contain sm:h-[100%] sm:w-[60%]"}
           imgContainerStyle={
-            "bg-[#ecc86c] h-44 md:w-half sm:h-[100%] sm:w-[50%] w-[85%] m-3 md:m-0 flex justify-center items-center p-1 rounded-md"
+            "h-44 md:w-half sm:h-[100%] sm:w-[50%] w-[85%] m-3 md:m-0 flex justify-center items-center p-1 rounded-md"
           }
         />
       </div>
@@ -51,7 +51,7 @@ export default function Results() {
           }
           imgStyle={"w-full h-auto md:h-[165px] h-fit object-contain sm:h-[100%] sm:w-[60%]"}
           imgContainerStyle={
-            "bg-[#ecc86c] h-44 md:w-half sm:h-[100%] sm:w-[50%] w-[85%] m-3 md:m-0 flex justify-center items-center p-1 rounded-md"
+            "h-44 md:w-half sm:h-[100%] sm:w-[50%] w-[85%] m-3 md:m-0 flex justify-center items-center p-1 rounded-md"
           }
         />
       </div>

@@ -16,7 +16,7 @@ export default function ContactPage() {
       ) : null}
       <div className="p-2 relative">
       {screenSize === "large" || screenSize === "medium" ? (
-          <h1 className="text-3xl font-kanit my-8">
+          <h1 className="text-5xl font-kanit my-8">
             Meet{" "}
             <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
             Founders
@@ -37,12 +37,7 @@ export default function ContactPage() {
         </TwoCardsEffect>
         <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 py-2 absolute sm:bottom-[890px] bottom-[500px] md:bottom-[540px] w-fit md:right-56 right-[160px] text-black font-kanit -rotate-[5deg] rounded-xl px-10 text-sm md:text-[16px] whitespace-nowrap right-0 left-0">
           <h1>Nithish Malhotra</h1>
-          {/* <div className="flex justify-center mt-2">
-            <i className="fas fa-youtube mr-2"></i>
-            <a href="https://www.youtube.com/channel/yourchannel" rel="noopener noreferrer"><i className="fas fa-youtube mr-2"></i></a>
-            <i className="fab fa-linkedin-in"></i>
-          </div>  */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-around items-center">
             <a href="">
               <svg
                 stroke="currentColor"
