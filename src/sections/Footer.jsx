@@ -9,7 +9,16 @@ export default function Footer() {
         <button className="md:my-10 bg-gradient-to-br from-yellow-500 to-yellow-600 text-black font-kanit px-7 py-2.5 md:text-2xl text-xl rounded">
           Book Call
         </button>
-        <button className="my-10 bg-gradient-to-br from-yellow-500 to-yellow-600 text-black font-kanit px-7 py-2.5 md:text-2xl text-xl rounded">
+        <button 
+          className="my-10 bg-gradient-to-br from-yellow-500 to-yellow-600 text-black font-kanit px-7 py-2.5 md:text-2xl text-xl rounded"
+          onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdupUHV2uO6q69BHXvPzE1DgJu32HYQ31zPdyZ5uflmOftXRw/viewform", "_blank")}
+        >
+          Any Queries?
+        </button>
+        <button 
+          className="my-10 bg-gradient-to-br from-yellow-500 to-yellow-600 text-black font-kanit px-7 py-2.5 md:text-2xl text-xl rounded"
+          onClick={() => window.open(`https://wa.me/8235937883?text=Hello%20World`, '_blank')}
+        >
           Chat On Whatsapp
         </button>
       </div>

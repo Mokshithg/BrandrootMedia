@@ -148,20 +148,25 @@
 
 
 
-import { LinearGradient } from "react-text-gradients";
-import vid1 from "../assets/videos/1.mp4";
-import vid2 from "../assets/videos/2.mp4";
-import vid3 from "../assets/videos/3.mp4";
-import vid4 from "../assets/videos/4.mp4";
-import vid5 from "../assets/videos/5.mp4";
-import vid6 from "../assets/videos/6.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useScreenSize from "../utils/screenSize";
 import "swiper/css";
 import "swiper/css/pagination";
 import TwoCardsEffect from "../components/TwoCardsEffect";
+import { LinearGradient } from "react-text-gradients";
 
-const vids = [vid1, vid2, vid3, vid4, vid5, vid6];
+const youtubeVideos = [
+  "https://www.youtube.com/embed/04pHWGEYH7A?si=TVd2tfYSlgfA-B3m",
+  "https://www.youtube.com/embed/LqaZIVCvjoo?si=kAQm-cCXdLsvoFbW",
+  "https://www.youtube.com/embed/7d2GxwGJUJc?si=cOYfx5zvAJ3fAwR5",
+  "https://www.youtube.com/embed/r4aZ8SIADGA?si=zWoFrSMxo3i3xJaT",
+  "https://www.youtube.com/embed/ZS_scW7hlTc?si=jFXYDdXU4iKFEio8",
+  "https://www.youtube.com/embed/f0f8U-SAqj4?si=lm6lZVmrgDu-Rfty",
+  "https://www.youtube.com/embed/yH3jiGWWi9I?si=n203am904IEz3vcH",
+  "https://www.youtube.com/embed/L33jHbVtyRo?si=6Tcy24EjdSBQsXjQ",
+  "https://www.youtube.com/embed/RqUYy1HE03g?si=BKm3w-5yX0J9U2s0",
+  "https://www.youtube.com/embed/Lp1_VVgLnJY?si=NUAA6ENdI3zSZhjy"
+];
 
 export default function Portfolio() {
   const screenSize = useScreenSize();
@@ -176,39 +181,33 @@ export default function Portfolio() {
       <div className="flex gap-20 my-14">
         <Swiper
           loop={true}
-          slidesPerView={
-            screenSize === "medium" || screenSize === "large" ? 4 : 1
-          }
+          slidesPerView={screenSize === "medium" || screenSize === "large"? 4 : 1}
           centeredSlides={false}
           spaceBetween={32}
           grabCursor={true}
           className="mySwiper"
           freeMode={true}
         >
-          {vids.map((e, i) => (
-            <SwiperSlide
-              key={i}
-              className="border-2 border-red-900 p-1 rounded-md"
-            >
-              <video
-                src={e}
-                className=""
-                width={
-                  screenSize === "medium" || screenSize === "large"
-                    ? "320"
-                    : "500"
-                }
-                height={
-                  screenSize === "medium" || screenSize === "large"
-                    ? "190"
-                    : "350"
-                }
-                autoPlay
-                muted
-                controls
-              ></video>
-            </SwiperSlide>
-          ))}
+         {youtubeVideos.map((url, i) => (
+      <SwiperSlide
+        key={i}
+        className="video-card border-2 border-white-900 p-3 rounded-lg shadow-lg transform transition duration-500 hover:-translate-y-1 hover:shadow-xl flex items-center justify-center"
+      >
+        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+          <iframe
+            src={url}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            width={screenSize === "medium" || screenSize === "large"? "320" : "500"}
+            height={screenSize === "medium" || screenSize === "large"? "190" : "350"}
+            style={{ maxWidth: '100%', maxHeight: '100%' }}
+          ></iframe>
+        </div>
+      </SwiperSlide>
+    ))}
+          <div className="swiper-button-next text-slate-100 animate-bounce-left" style={{ color: 'white' }}></div>
+          <div className="swiper-button-prev text-slate-100 animate-bounce-right btn-black" style={{ color: 'white' }}></div>
         </Swiper>
       </div>
       <div>
