@@ -1,7 +1,14 @@
+import { LinearGradient } from "react-text-gradients";
+
 const Blogs = () => {
     return (
         <div className="container mx-auto px-2 -mt-8">
-            <h2 className="text-[30px] md:text-[55px] font-kanit tracking-tight leading-[32px] md:leading-[60px] ml-5 mb-[-85px] mt-36">Blogs Section</h2>
+            <h2 className="text-[30px] md:text-[55px] font-kanit tracking-tight leading-[32px] md:leading-[60px] ml-5 mb-[-85px] mt-36">
+                Blogs{" "}
+            <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
+            Section
+            </LinearGradient>
+                </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="mx-5 mb-36 mt-40 p-6 rounded-lg bg-white text-black">
                         <h1 className="text-4xl font-kanit mb-6">Tech Talks: Exploring the Future</h1>

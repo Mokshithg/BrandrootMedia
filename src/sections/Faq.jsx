@@ -47,7 +47,7 @@ const FAqs = [
 
 export default function Faq() {
   return (
-    <div className="mt-4 -mt-40">
+    <div className="-mt-44">
       <h1 className="text-5xl md:text-6xl font-poppins tracking-wide mb-8">
         FAQs
       </h1>

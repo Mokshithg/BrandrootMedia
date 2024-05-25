@@ -15,14 +15,14 @@ export default function ContactPage() {
         </h1>
       ) : null}
       <div className="p-2 relative">
-      {screenSize === "large" || screenSize === "medium" ? (
+      {/* {screenSize === "large" || screenSize === "medium" ? (
           <h1 className="text-5xl font-kanit my-8">
             Meet{" "}
             <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
             Founders
             </LinearGradient>
           </h1>
-        ) : null}
+        ) : null} */}
         <TwoCardsEffect
           width={"fit"}
           bg={"bg-gradient-to-r from-yellow-500 to-white-600"}
@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 py-2 absolute sm:bottom-[890px] bottom-[500px] md:bottom-[540px] w-fit md:right-56 right-[160px] text-black font-kanit -rotate-[5deg] rounded-xl px-10 text-sm md:text-[16px] whitespace-nowrap right-0 left-0">
           <h1>Nithish Malhotra</h1>
           <div className="flex justify-around items-center">
-            <a href="">
+            <a href="https://www.instagram.com/nitish.malhotraa?igsh=aXR3b3I1aDNhcDF0">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -82,6 +82,9 @@ export default function ContactPage() {
         </h1>
         <p className="text-2xl md:text-xl -mt-4 text-white-400 font-kanit">
           250,000+ Youtube | 150,000+ Instagram
+        </p>
+        <p className="text-2xl md:text-xl  text-white-400 font-kanit">
+        - nitish@brandrootmedia.com
         </p>
         <p className="text-[20px] md:text-2xl my-4 md:my-10 font-light mb-56 md:mb-48">
         As an entrepreneur and content creator, Nitish has a passion for creating exceptional content that resonates with audiences.His journey began in February 2021 when he started making finance videos on YouTube for India's youth.
