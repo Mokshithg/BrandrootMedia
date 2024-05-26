@@ -30,7 +30,7 @@ export default function ContactPage() {
           rotate2={"rotate-[5deg]"}
         >
           <img
-            src="https://ik.imagekit.io/7saglhzb5/Nitish.jpg?updatedAt=1716363969199"
+            src="https://ik.imagekit.io/7saglhzb5/brandroot/Nitish.jpg?updatedAt=1716715417006"
             alt=""
             className="w-[65vh] h-[70vh] rounded-xl object-cover"
           />

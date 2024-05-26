@@ -1,3 +1,4 @@
+import { LinearGradient } from "react-text-gradients";
 import FaqCard from "../components/FaqCard";
 
 const FAqs = [
@@ -48,8 +49,10 @@ const FAqs = [
 export default function Faq() {
   return (
     <div className="-mt-44">
-      <h1 className="text-5xl md:text-6xl font-poppins tracking-wide mb-8">
-        FAQs
+      <h1 className="text-5xl md:text-6xl font-medium tracking-wide mb-8">
+        <LinearGradient  gradient={["to right", "#fdde00 ,#ffffff"]}>
+          FAQs
+        </LinearGradient>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-0">
         {FAqs.map((e) => (

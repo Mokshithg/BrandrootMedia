@@ -64,14 +64,14 @@ const clients = [
 export default function Services() {
   return (
     <div className="mb-36" id="services">
-      <h1 className="text-4xl md:text-[55px] font-kanit tracking-tight leading-[35px] md:leading-[60px]">
+      <h1 className="text-4xl md:text-[55px] font-medium tracking-tight ml-8 leading-[35px] md:leading-[60px]">
         Here's what <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>we will do for you</LinearGradient>
       </h1>
       <div className="flex gap-20 my-4 mt-16 gap-x-40 gap-y-40 px-4 md:px-8">
           <Swiper
             loop={true}
             slidesPerView={4}
-            centeredSlides={false}
+            centeredSlides={true}
             slidesPerGroupSkip={1}
             grabCursor={true}
             keyboard={{
@@ -118,7 +118,7 @@ export default function Services() {
         </div>
 
           <div className="my-36" id="clientwords">
-        <h1 className="text-3xl md:text-[55px] font-kanit tracking-tight md:leading-[60px] mb-7 md:mb-17">
+        <h1 className="text-3xl md:text-[55px] font-medium ml-4 tracking-tight md:leading-[60px] mb-7 md:mb-17">
           Hear from our{" "}
           <LinearGradient gradient={["to right", "#fdde00,#ffffff"]}>
             Happy Clients

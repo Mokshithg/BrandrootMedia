@@ -5,7 +5,7 @@ import TiltCard from "../components/TiltCard";
 export default function Results() {
   return (
     <div className="mx-5 my-64 mt-8" id="results">
-      <h1 className="text-[50px] font-kanit tracking-tight leading-[60px] mt-36 mb-14">
+      <h1 className="text-[50px] font-medium tracking-tight leading-[60px] mt-36 mb-14">
       Success Stories: Brands Thriving with{" "}
         <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>
         Brandroot Media

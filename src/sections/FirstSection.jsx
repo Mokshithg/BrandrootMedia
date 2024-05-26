@@ -72,8 +72,8 @@ export default function FirstSection() {
           <LinearGradient gradient={["to right","#fdde00,#ffffff"]} className="md:text-[6vh] text-[4vh] font-[700] font-lato">
             Your One-Stop Solution <br/>for Content Creation Success
           </LinearGradient><br/>
-          <div className="mt-4">
-            <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+          <div className="mt-44">
+            <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-9 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
               Schedule a Call
             </a>
           </div>
