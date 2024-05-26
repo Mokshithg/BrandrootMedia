@@ -7,6 +7,9 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Keyboard, Navigation, Autoplay } from "swiper/modules";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const images = {
   1: [
@@ -73,8 +76,9 @@ export default function FirstSection() {
             Your One-Stop Solution <br/>for Content Creation Success
           </LinearGradient><br/>
           <div className="mt-44">
-            <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-9 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+            <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-9 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 space-x-2">
               Schedule a Call
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </a>
           </div>
         </div>
@@ -100,7 +104,7 @@ export default function FirstSection() {
         </div>
       </div>
 
-       <div className="my-8 -mt-20">
+       <div className="my-8 -mt-24">
         <h1 className="text-3xl md:text-6xl font-semibold tracking-tight">
           <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>
             Trusted by
@@ -135,10 +139,11 @@ export default function FirstSection() {
             const channelLink = getChannelLink(brand);
             return (
               <SwiperSlide key={index} className="">
-                <a href={channelLink} target="_blank" rel="noopener noreferrer">
-                  <img src={brand.url} className="h-44 w-44 object-contain mb-4" alt="" title={brand.name} />
-                  {/* <span className="hidden"data-name={brand.name}>{brand.name}</span>  */}
-                </a>
+                  <a href={channelLink} target="_blank" rel="noopener noreferrer">
+                    <img src={brand.url} className="h-44 w-44 object-contain mb-4" alt="" title={brand.name} />
+                    {/* Uncomment and adjust the span for brand name visibility if needed */}
+                    {/* <span className="hidden" data-name={brand.name}>{brand.name}</span> */}
+                  </a>  
               </SwiperSlide>
             );
           })}

@@ -133,6 +133,8 @@ import { Keyboard, Navigation, Autoplay } from "swiper/modules";
 import useScreenSize from '../utils/screenSize';
 import TwoCardsEffect from '../components/TwoCardsEffect';
 import { LinearGradient } from 'react-text-gradients';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const youtubeVideos = [
   "https://www.youtube.com/embed/04pHWGEYH7A",
@@ -242,6 +244,7 @@ export default function Portfolio() {
           <div className="flex justify-center">
             <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center px-10 py-4 border text-1xl font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 w-auto">
               Schedule a Call
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </a>
           </div>
         </div>

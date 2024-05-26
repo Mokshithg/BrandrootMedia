@@ -128,9 +128,9 @@ export default function Footer() {
       <div className="w-full md:w-screen relative bg-gradient-to-br from-yellow-500 to-yellow-600 flex py-20 items-start h-12 md:h-full justify-between gap-20">
         {/* Social Media Icons */}
         <div className="flex flex-col items-start">
-          <p className="text-4xl font-medium text-black ml-48 md:ml-0">Contact Us</p>
-          <p className='text-black ml-48 md:ml-0 font-medium text-1xl mt-4'>talha@brandrootmedia.com</p>
-          <p className='text-black ml-48 md:ml-0 font-medium text-1xl'>nitish@brandrootmedia.com</p>
+          <p className="text-4xl font-medium text-black ml-48 ">Contact Us</p>
+          <p className='text-black ml-48 font-medium text-1xl mt-4'>talha@brandrootmedia.com</p>
+          <p className='text-black ml-48 font-medium text-1xl'>nitish@brandrootmedia.com</p>
           <div className="flex gap-4 -mb-12">
             <a href="https://www.linkedin.com/company/brandrootmedia/" className="ml-48 mt-20">
               <img

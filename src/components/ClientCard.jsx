@@ -4,7 +4,7 @@ import { LinearGradient } from "react-text-gradients";
 
 export default function ClientCard({ img, p, name, comp, vid }) {
   return (
-      <div className="flex flex-col border-white-800 rounded-[15px] p-1">  
+      <div className="flex flex-col border-2 border-white-800 rounded-[15px] p-1">  
       <div className="flex flex-col items-center border-2 border-yellow-700 gap-4 custom-shadow p-6 md:p-12 rounded-[14px] bg-white h-full w-full relative">
         <img src={img} alt="" className="h-36 rounded-full" />
         <div className="pb-10 border-b border-white">
