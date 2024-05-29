@@ -49,7 +49,7 @@ const FAqs = [
 export default function Faq() {
   return (
     <div className="-mt-44">
-      <h1 className="text-5xl md:text-6xl font-medium tracking-wide mb-8">
+      <h1 className="text-3xl md:text-5xl font-poppins text-[4vh] font-[700] mb-8">
         <LinearGradient  gradient={["to right", "#fdde00 ,#ffffff"]}>
           FAQs
         </LinearGradient>

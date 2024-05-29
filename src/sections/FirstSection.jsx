@@ -1,6 +1,5 @@
 import { LinearGradient } from "react-text-gradients";
 import ImageCubeEffect from "../components/ImageCubeEffect";
-import TwoCardsEffect from "../components/TwoCardsEffect";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -9,6 +8,7 @@ import "swiper/css/pagination";
 import { Keyboard, Navigation, Autoplay } from "swiper/modules";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import TrustedBy from "../components/TrustedBy";
 
 
 const images = {
@@ -72,11 +72,14 @@ export default function FirstSection() {
     <div className="text-white md:my-44 my-16 mx-0 mt-0 mb-0">
       <div className="text-3xl md:text-5xl flex md:flex-row flex-col justify-between">
         <div className="">
-          <LinearGradient gradient={["to right","#fdde00,#ffffff"]} className="md:text-[6vh] text-[4vh] font-[700] font-lato">
+          <LinearGradient gradient={["to right","#fdde00,#fdde00"]} className="md:text-[6vh] text-[4vh] font-[700] font-poppins">
             Your One-Stop Solution <br/>for Content Creation Success
           </LinearGradient><br/>
+          <LinearGradient gradient={["to right","#ffffff,#ffffff"]} className="md:text-[4vh] text-[2vh] font-[300] font-poppins">
+            Taking content creation to the next level
+          </LinearGradient>
           <div className="mt-44">
-            <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-9 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 space-x-2">
+            <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-2xl font-poppins rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 space-x-2">
               Schedule a Call
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </a>
@@ -105,12 +108,12 @@ export default function FirstSection() {
       </div>
 
        <div className="my-8 -mt-24">
-        <h1 className="text-3xl md:text-6xl font-semibold tracking-tight">
+        <h1 className="text-3xl md:text-6xl font-poppins text-[4vh] font-[700]">
           <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>
             Trusted by
           </LinearGradient>
         </h1>
-        <TwoCardsEffect rotate={"rotate-[2deg]"}> 
+        <TrustedBy rotate={"rotate-[2deg]"}> 
           <Swiper
             loop={true}
             slidesPerView={4}
@@ -147,10 +150,10 @@ export default function FirstSection() {
               </SwiperSlide>
             );
           })}
-          <div className="swiper-button-next text-slate-100 animate-bounce-left" style={{ color: 'black' }}></div>
-          <div className="swiper-button-prev text-slate-100 animate-bounce-right btn-black" style={{ color: 'black' }}></div>
+          <div className="swiper-button-next text-slate-100 animate-bounce-left" style={{ color: 'white' }}></div>
+          <div className="swiper-button-prev text-slate-100 animate-bounce-right btn-black" style={{ color: 'white' }}></div>
           </Swiper>
-        </TwoCardsEffect>
+        </TrustedBy>
       </div> 
     </div>
   );

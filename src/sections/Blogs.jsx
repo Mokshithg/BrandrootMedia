@@ -3,7 +3,7 @@ import { LinearGradient } from "react-text-gradients";
 const Blogs = () => {
     return (
         <div className="container mx-auto px-2 -mt-8">
-            <h2 className="text-[30px] md:text-[55px] font-medium tracking-tight leading-[32px] md:leading-[60px] ml-5 mb-[-85px] mt-36">
+            <h2 className="text-3xl md:text-5xl font-poppins text-[4vh] font-[700] ml-5 mb-[-85px] mt-36">
                 Blogs{" "}
             <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
             Section

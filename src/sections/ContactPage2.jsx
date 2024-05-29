@@ -83,9 +83,6 @@ export default function ContactPage() {
         <p className="text-2xl md:text-xl -mt-4 text-white-400 font-kanit">
           250,000+ Youtube | 150,000+ Instagram
         </p>
-        <p className="text-2xl md:text-xl  text-white-400 font-kanit">
-        - nitish@brandrootmedia.com
-        </p>
         <p className="text-[20px] md:text-2xl my-4 md:my-10 font-light mb-56 md:mb-48">
         As an entrepreneur and content creator, Nitish has a passion for creating exceptional content that resonates with audiences.His journey began in February 2021 when he started making finance videos on YouTube for India's youth.
         </p>

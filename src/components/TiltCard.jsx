@@ -10,8 +10,8 @@ export default function TiltCard({
 }) {
   return (
     <Tilt tiltMinAngleX={2} tiltMMinAngleY={2}>
-      <div className="my-8 p-[2px] custom-shadow bg-gradient-to-br border-4 p-6 cursor-pointer from-yellow-500 to-white-600 rounded-[10px] mb-12">
-        <div className="flex md:flex-row flex-col p-3 md:p-8 bg-black rounded-[10px] items-center bg-white">
+      <div className="my-8 p-[6px] custom-shadow border-4 cursor-pointer from-yellow-500 to-white-600 rounded-[10px] mb-12 p-4">
+        <div className="flex md:flex-row flex-col p-3 custom-shadow md:p-8 bg-black rounded-[10px] items-center bg-white">
           <div className={imgContainerStyle}>
             <img src={image} className={imgStyle} alt="" />
           </div>

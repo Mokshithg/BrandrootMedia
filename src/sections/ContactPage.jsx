@@ -10,7 +10,7 @@ export default function ContactPage() {
       className="flex md:flex-row flex-col md:items-center justify-between md:gap-20 gap-5 items-center -mt-8"
     >
       {screenSize === "small" ? (
-        <h1 className="text-3xl font-kanit my-0">
+        <h1 className="text-3xl font-poppins my-0">
           Meet{" "}
           <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
           Founder
@@ -20,7 +20,7 @@ export default function ContactPage() {
       <div className="p-2 relative">
         <div className="flex">
         {screenSize === "large" || screenSize === "medium"? (
-          <h1 className="text-5xl font-medium my-10">
+          <h1 className="text-3xl md:text-5xl font-poppins text-[4vh] font-[700] my-10">
             Meet{" "}
             <LinearGradient gradient={["to bottom", "#fdde00,#ffffff"]}>
               Founders
@@ -88,9 +88,6 @@ export default function ContactPage() {
         <h1 className="text-5xl md:text-4xl mt-20 font-medium my-4">Abu Talha</h1>
         <p className="text-2xl md:text-xl -mt-4 text-white-400 font-kanit">
           250,000+ Youtube | 150,000+ Instagram
-        </p>
-        <p className="text-2xl md:text-xl  text-white-400 font-kanit">
-        - talha@brandrootmedia.com
         </p>
         <p className="text-[20px] md:text-2xl my-4 md:my-10 font-light mb-56 md:mb-48">
           As an entrepreneur and content creator, Ayushman has a passion for
