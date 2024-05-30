@@ -16,7 +16,7 @@ export default function App() {
   const screenSize = useScreenSize();
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="md:mx-40 mx-4 my-6 mt-0 font-kanit text-white">
+    <div className="md:mx-40 mx-4 my-6 mt-0 font-poppins text-white">
       <nav className="flex w-full mt-4 justify-between items-center">
         <a href="/">
           <img

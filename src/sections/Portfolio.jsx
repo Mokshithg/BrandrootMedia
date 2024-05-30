@@ -129,8 +129,10 @@
 
 
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { LinearGradient } from 'react-text-gradients';
+import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from '@mui/material';
+import { Link } from 'react-router-dom'; 
 
 const sections = [
   {
@@ -140,13 +142,11 @@ const sections = [
         title: "Sanjay's Ad Edit",
         description: "A captivating Ad video for his SEO course. Edited with attractive animations and to-the-tee transcribing!",
         image: "https://growthrocket.media/_next/image?url=%2F01.jpg&w=1920&q=75",
-        link: "https://www.example.com/video-edits/1",
       },
       {
         title: "Luru's ProductHunt Video",
         description: "A successful ProductHunt launch feature. A high-quality edit with custom-made screen grabs and creative animations!",
         image: "https://growthrocket.media/_next/image?url=%2F02.jpg&w=1920&q=75",
-        link: "https://www.example.com/video-edits/2",
       },
     ],
   },
@@ -157,24 +157,39 @@ const sections = [
         title: "Ishan's Dr Strange thumbnail",
         description: "A mystic fusion of creativity and mastery, showcasing the sorcerer of content's enchanting digital realm.",
         image: "https://growthrocket.media/_next/image?url=%2F06.jpg&w=1920&q=75",
-        link: "https://www.example.com/thumbnails/1",
       },
       {
         title: "Hitesh's Dr Strange thumbnail",
         description: "A mystic fusion of creativity and mastery, showcasing the sorcerer of content's enchanting digital realm.",
         image: "https://growthrocket.media/_next/image?url=%2F06.jpg&w=1920&q=75",
-        link: "https://www.example.com/thumbnails/1",
       }
     ],
   },
 ];
 
-function Portfolio() {
+
+
+function Portfolio({ open, onClose}) {
   const [activeSection, setActiveSection] = useState('all'); // Default to showing all
+  const [savedScrollPosition, setSavedScrollPosition] = useState(0);
+  const [popupContent, setPopupContent] = useState(null);
 
   const handleClick = (sectionTitle) => {
-    setActiveSection(sectionTitle === 'all'? 'all' : sectionTitle); // Corrected logic
+    setSavedScrollPosition(window.scrollY);
+    setActiveSection(sectionTitle === 'all'? 'all' : sectionTitle);
   };
+
+  const handleCardClick = (sectionIndex, card) => {
+    const section = sections[sectionIndex];   
+    setPopupContent({
+      title: section.title,
+      cards: [card], 
+    });
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, savedScrollPosition);
+  }, [savedScrollPosition]);
 
   return (
     <div className="mx-5 mb-36 min-h-screen bg-black py-6 -mt-20 flex flex-col items-center justify-center sm:py-12">
@@ -209,17 +224,14 @@ function Portfolio() {
           ))}
         </ul>
       </nav>
-      <main className="content">
-        {sections.map((section) => (
-          <div
-            key={section.title}
-            className={`content-section my-8 p-4 rounded-lg shadow-lg transition-opacity duration-500 ease-in-out ${
-              activeSection!== 'all' && activeSection!== section.title? 'hidden' : 'block'
-            }`}
-          >
-            <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
+      
+      {/* Pop-up Content */}
+      {/* {popupContent && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10" onClick={() => setPopupContent(null)}>
+          <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs w-full" onClick={(e) => e.stopPropagation()}>
+            <h2 className="text-2xl font-bold mb-4">{popupContent.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {section.content.map((card, index) => (
+              {popupContent.cards.map((card, index) => (
                 <a
                   key={index}
                   href={card.link}
@@ -233,11 +245,59 @@ function Portfolio() {
                 </a>
               ))}
             </div>
+            <button onClick={() => setPopupContent(null)} className="absolute top-0 right-0 mt-2 mr-2">Close</button>
+          </div>
+        </div>
+      )} */}
+
+      <main className="content">
+        {sections.map((section, sectionIndex) => (
+          <div
+            key={section.title}
+            className={`content-section my-8 p-4 rounded-lg shadow-lg transition-opacity duration-500 ease-in-out ${
+              activeSection!== 'all' && activeSection!== section.title? 'hidden' : 'block'
+            }`}
+          >
+            <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {section.content.map((card, index) => (
+                <a
+                  key={index}
+                  href={card.link}
+                  className="card block overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out bg-black text-white transform scale-100 hover:scale-105 transition-transform duration-150"
+                  onClick={() => handleCardClick(sectionIndex, card)}
+                >
+                  <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
+                  <div className="p-4">
+                    <h3 className="font-semibold text-lg mb-2">{card.title}</h3>
+                    <p className="text-sm">{card.description}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         ))}
       </main>
+      {popupContent && (
+        <Dialog open={open} onClose={onClose} maxWidth="md">
+          <DialogTitle>{popupContent.title}</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              {/* Your existing JSX for displaying card details remains unchanged */}
+            </DialogContentText>
+            {/* Add a link to another page within the dialogue box */}
+            <p>
+              Want to see more?{' '}
+              <Link to="/another-page" style={{ textDecoration: 'none', color: 'inherit' }}>Go to Another Page</Link>
+            </p>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={onClose}>Close</Button>
+          </DialogActions>
+        </Dialog>
+      )}
     </div>
   );
 }
-  
+
 export default Portfolio;

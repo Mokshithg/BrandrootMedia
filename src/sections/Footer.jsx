@@ -17,7 +17,7 @@ export default function Footer() {
         </button>
         <button 
           className="my-10 bg-gradient-to-br from-yellow-500 to-yellow-600 text-black font-poppins px-7 py-2.5 md:text-2xl text-xl rounded"
-          onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdupUHV2uO6q69BHXvPzE1DgJu32HYQ31zPdyZ5uflmOftXRw/viewform", "_blank")}
+          onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSceX9B4XDB_WbOdunSFsjQCHHAZFaP-vh5MxsyCYKPJ4TpJCg/viewform", "_blank")}
         >
           Any Queries?
         </button>

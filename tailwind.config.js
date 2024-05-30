@@ -1,13 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
-
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./public/index.html", "./src/**/*.+(js|ts|jsx|tsx)"], // Adjusted content paths
   theme: {
     extend: {
       fontFamily: {
-        'rust': ['Rust', 'sans-serif'], // Assuming Rust is a font family name, adjust as necessary
-        'antonio': ['Antonio', 'serif'], // Assuming Antonio is a font family name, adjust as necessary
+        'rust': ['Rust', 'sans-serif'], // Keep as is, assuming 'Rust' is the correct font family name
+        'antonio': ['Antonio', 'serif'], // Keep as is, assuming 'Antonio' is the correct font family name
         'montserrat': ['Montserrat', 'sans-serif'],
         'lato': ['Lato', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
@@ -19,6 +18,6 @@ export default {
     },
   },
   plugins: [
-    import('@tailwindcss/aspect-ratio'), // Updated to use ES Module syntax
+    import('@tailwindcss/aspect-ratio'),
   ],
 };
