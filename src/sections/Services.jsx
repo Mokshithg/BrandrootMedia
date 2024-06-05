@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useEffect } from "react";
 import ServiceCard from "../components/ServiceCard";
 import { LinearGradient } from "react-text-gradients";
 import ClientCard from "../components/ClientCard";
@@ -62,6 +63,32 @@ const clients = [
 ];
 
 export default function Services() {
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) {
+        setSlidesPerView(3);
+      } else if (window.innerWidth >= 1024) {
+        setSlidesPerView(3);
+      } else if (window.innerWidth >= 768) {
+        setSlidesPerView(3);
+      } else if (window.innerWidth >= 640) {
+        setSlidesPerView(3);
+      } else {
+        setSlidesPerView(1);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="mb-36" id="services">
       <h1 className="text-4xl md:text-[55px] font-poppins text-3xl md:text-6xl font-poppins text-[4vh] font-[700] ml-8 leading-[35px] md:leading-[60px]">
@@ -69,38 +96,16 @@ export default function Services() {
       </h1>
       <div className="flex gap-20 my-4 mt-16 gap-x-40 gap-y-40 px-4 md:px-8">
           <Swiper
-            loop={true}
-            slidesPerView={4}
-            centeredSlides={true}
-            slidesPerGroupSkip={1}
-            grabCursor={true}
-            keyboard={{
-              enabled: true,
-            }}
-            autoplay={{
-              delay: 2000, // specify autoplay delay in milliseconds
-              disableOnInteraction: true, // enable autoplay even after user interaction
-            }}
-            breakpoints={{
-              769: {
-                slidesPerView: 3,
-                slidesPerGroup: 1,
-              },
-              520: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-              },
-            }}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            spaceBetween={75}
-            modules={[Keyboard, Navigation, Autoplay]}
-            className="mySwiper px-30 py-10"
+            slidesPerView={slidesPerView}
+            spaceBetween={0}
+            navigation={true}
+            modules={[Navigation]}
+            loop={true} 
+            className="mySwiper py-10 px-[30px]"
+            // className="mySwiper px-30 py-10"
           >
             {more_cards.map((e, i) => (
-              <SwiperSlide key={i} className="">
+              <SwiperSlide key={i} className="arrow">
                 <ServiceCard
                   key={i}
                   h={e.h}
@@ -112,12 +117,12 @@ export default function Services() {
                 />
               </SwiperSlide>
             ))}
-            <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
-            <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div>
+            {/* <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
+            <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div> */}
           </Swiper>
         </div>
 
-          <div className="my-36" id="clientwords">
+          <div className="my-36" id="happyclients">
         <h1 className="text-3xl md:text-[55px] font-poppins ml-4 text-3xl md:text-6xl font-poppins text-[4vh] font-[700] md:leading-[60px] mb-7 md:mb-17">
           Hear from our{" "}
           <LinearGradient gradient={["to right", "#fdde00,#ffffff"]}>

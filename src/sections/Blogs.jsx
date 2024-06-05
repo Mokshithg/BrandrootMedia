@@ -106,7 +106,7 @@ const Blogs = () => {
                     </div>
                     <button
                       onClick={() => setShowAll(!showAll)} // Toggle the state
-                      className="relative bottom-0  right-0 left-10 mb-4 mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                      className="relative bottom-0 mt-4 -mb-4 right-0 left-10 mb-4 mr-4 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
                     >
                       {showAll? "Show Less" : "Read More"}
                     </button>

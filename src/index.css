@@ -50,7 +50,9 @@ html::-webkit-scrollbar-thumb {
   background-image: linear-gradient(to bottom, #fdde00, #ffffff);
   -webkit-border-radius: 2ex;
 }
-
+/* .arrow{
+  color: white;
+} */
 .image{
   width: 300px;
   border-radius: 25px;
