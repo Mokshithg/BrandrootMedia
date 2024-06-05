@@ -81,7 +81,7 @@ export default function ContactPage() {
         Nithish Malhotra
         </h1>
         <p className="text-2xl md:text-xl -mt-4 text-white-400 font-kanit">
-          250,000+ Youtube | 150,000+ Instagram
+           Youtube |  Instagram
         </p>
         <p className="text-[20px] md:text-2xl my-4 md:my-10 font-light mb-56 md:mb-48">
         Nitish is a top social media consultant known for helping creators & business owners go viral. He is an entrepreneur who co-founded the marketing company ‘Brandroot Media.’His journey started when he was just 18 & since then he has worked with tens of creators & helped them gain millions of followers on all social media platforms.

@@ -136,7 +136,7 @@ import { Link } from 'react-router-dom';
 
 const sections = [
   {
-    title: 'Video Edits',
+    title: 'Short Videos',
     content: [
       {
         title: "Sanjay's Ad Edit",
@@ -148,22 +148,95 @@ const sections = [
         description: "A successful ProductHunt launch feature. A high-quality edit with custom-made screen grabs and creative animations!",
         image: "https://growthrocket.media/_next/image?url=%2F02.jpg&w=1920&q=75",
       },
+      {
+        title : "Quick Cooking Tip: Pasta Sauce",
+        description : "In just 60 seconds, learn how to whip up a delicious homemade pasta sauce that's sure to impress your dinner guests.",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcTyzZ0LPl8SSFv0-T1mFW3KKeYnLlrU-ROpAw&s?updatedAt=1717594979996"
+      }      
     ],
   },
   {
-    title: 'Thumbnails',
+    title: 'Long Videos',
     content: [
       {
         title: "Ishan's Dr Strange thumbnail",
         description: "A mystic fusion of creativity and mastery, showcasing the sorcerer of content's enchanting digital realm.",
-        image: "https://growthrocket.media/_next/image?url=%2F06.jpg&w=1920&q=75",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcR6RSfsfASIcy6tiu_qnrDM2TPJ9vQSv3bJHQ&s?updatedAt=1717593761073",
       },
       {
         title: "Hitesh's Dr Strange thumbnail",
         description: "A mystic fusion of creativity and mastery, showcasing the sorcerer of content's enchanting digital realm.",
-        image: "https://growthrocket.media/_next/image?url=%2F06.jpg&w=1920&q=75",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcRTi-l_mowzkoFwpvj7_vTdhsHp0ZuLd6LnpQ&s?updatedAt=1717593825354",
+      },
+      {
+        title: "Keeanu's thumbnail",
+        description: "A mystic fusion of creativity and mastery, showcasing the sorcerer of content's enchanting digital realm.",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcS9LBHpDDM202VdP_TI7m55Glh5Npz-4GvhvQ&s?updatedAt=1717594099375",
       }
     ],
+  },
+  {
+    title: "Podcast Thumbnail",
+    content: [
+      {
+        title: "Tech Talk Show Thumbnail",
+        description: "A sleek design featuring a futuristic cityscape, symbolizing the cutting-edge topics discussed in the podcast.",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcS4keddSjKYdNG_WEEmPzCbtIu3Gi-ItvR5zA&s?updatedAt=1717593452575"
+      },
+      {
+        title: "Literature Lounge Thumbnail",
+        description: "A cozy bookshelf background with soft lighting, perfect for a podcast that dives deep into literature and storytelling.",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcQlw8kGjtDqCcv_TSQcvjli4hU6u89uUpNZ9g&s?updatedAt=1717593652482"
+      },
+      {
+        title: "Exploring Hidden Worlds: A Journey Through Lesser-Known Destinations",
+        description: "Join us as we delve into the mysteries and wonders of off-the-beaten-path destinations around the globe.",
+        image : "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcReJCqpAPI5yihK_UHV1ptdBorcPN-oDVNkdw&s?updatedAt=1717594475272"
+      }
+      
+    ]
+  },
+  
+  {
+    title: "Logo Design",
+    content: [
+      {
+        title: "Green Planet Logo",
+        description: "An eco-friendly logo featuring a stylized tree and leaf motif, designed for environmental advocacy groups.",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcQTQfg9yX0Si_IrRqbdM7Djur7z8k92Bx_1ww&s?updatedAt=1717593160754"
+      },
+      {
+        title: "Startup Spark Logo",
+        description: "A dynamic logo with a flame and sparkles, representing innovation and the launch of new ventures.",
+        image: "https://ik.imagekit.io/7saglhzb5/unnamed.jpg?updatedAt=1717593312764"
+      },
+      {
+        title: "The Creative Canvas Podcast Logo",
+        description : "A vibrant and dynamic logo featuring a canvas filled with paint strokes and brushes, symbolizing the journey of creativity and storytelling in podcasting.",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcSNwcHy39GaogeK3lED1o6q69E0UuVGyoSfKg&s?updatedAt=1717594657722"
+      }
+      
+    ]
+  },
+  {
+    title: "Social Media Post",
+    content: [
+      {
+        title: "Fitness Challenge Post",
+        description: "A vibrant post featuring a person doing yoga poses against a sunset backdrop, encouraging followers to join a fitness challenge.",
+        image: "https://ik.imagekit.io/7saglhzb5/Best-Times-to-Post-on-Social-Media-in-2022.jpg?updatedAt=1717592900136"
+      },
+      {
+        title: "Travel Inspiration Post",
+        description: "A stunning landscape photo with text overlay inviting followers to explore hidden gems around the world.",
+        image: "https://ik.imagekit.io/7saglhzb5/images_q=tbn:ANd9GcQYEBJs1AcKt9CP6-PwY9caGJfYLJPz7rr5qQ&s?updatedAt=1717593020907"
+      },
+      {
+        title: "Unlock Your Potential: Join Our Fitness Challenge!",
+        description: "Are you ready to transform your body and mind?",
+        image: "https://c8.alamy.com/comp/2KFY118/business-and-finance-concept-on-the-table-are-gears-pencils-and-a-notebook-with-the-inscription-unlock-your-potential-2KFY118.jpg",
+      }
+    ]
   },
 ];
 

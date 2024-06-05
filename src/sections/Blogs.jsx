@@ -79,17 +79,28 @@ const Blogs = () => {
             </LinearGradient>
             </h2>
                 <div className="">
-                   <div className="max-w-4xl mx-auto px-4 py-8 mx-5 mb-36 mt-40 p-6 rounded-lg bg-yellow-500 text-black">
-                    <h2 className="text-3xl font-bold mb-4 text-center">Steps to Success</h2>
-                    <ul className="list-disc pl-5 space-y-2">
+                <div className="mx-5 mb-10 mt-40 p-6 rounded-lg bg-white text-black custom-shadow border-4 cursor-pointer from-yellow-500 to-white-600 rounded-[10px] ">
+                        <h1 className="text-4xl font-poppins font-bold mb-6">Tech Talks: Exploring the Future</h1>
+                        <div>
+                            <p className="text-md font-poppins text-gray-600">Welcome to BrandRoot Media, where technology meets creativity At BrandRoot Media, we are passionate about crafting innovative solutions that elevate your digital presence to new heights. With our team of experienced professionals, we specialize in web design, app development, digital marketing, and more. Whether you are a startup looking to make your mark or an established business aiming to stay ahead of the curve, we are here to turn your vision into reality. Explore the latest trends, insights, and tech updates with our blog, and let BrandRoot Media be your trusted partner on your digital journey.</p>
+                        </div>
+                    </div>
+
+                   <div className="mx-5 mb-36 mt-10 p-6 rounded-lg bg-white text-black rounded-lg bg-white text-black custom-shadow border-4 cursor-pointer from-yellow-500 to-white-600 rounded-[10px]">
+
+                    <h2 className="text-3xl font-poppins font-bold mb-4 text-center">How to Grow on Social Media: 13 Expert Strategies for Building a Massive Online Presence
+</h2>
+                    
+
+                    <div className="list-disc pl-5 space-y-2 ">
                         {stepsData.map(step => (
-                        <li key={step.number} className="mb-2">
-                            <span className="inline-block align-middle mr-2 text-xl font-medium">{step.number}.</span>
+                        <div key={step.number} className="mb-2">
+                            <span className="inline-block align-middle mr-2 text-xl font-poppins">{step.number}.</span>
                             <strong className="text-gray-700">{step.title}</strong><br />
-                            <em className="text-gray-600">{step.description}</em>
-                        </li>
+                            <em className="text-gray-600 font-poppins text-md">{step.description}</em>
+                        </div>
                         ))}
-                    </ul>
+                    </div>
                     </div>
                 </div>
         </div>
