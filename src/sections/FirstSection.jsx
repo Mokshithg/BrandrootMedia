@@ -72,10 +72,10 @@ export default function FirstSection() {
     <div className="text-white md:my-44 my-16 mx-0 mt-0 mb-0">
       <div className="text-3xl md:text-5xl flex md:flex-row flex-col justify-between">
         <div className="">
-          <LinearGradient gradient={["to right","#fdde00,#fdde00"]} className="md:text-[6vh] text-[4vh] font-[700] font-poppins">
+          <LinearGradient gradient={["to right","#fdde00,#fdde00"]} className="md:text-[6vh] text-[4vh] font-[700] font-poppins italic">
             Your One-Stop Solution <br/>for Content Creation Success
           </LinearGradient><br/>
-          <LinearGradient gradient={["to right","#ffffff,#ffffff"]} className="md:text-[4vh] text-[2vh] font-[300] font-poppins">
+          <LinearGradient gradient={["to right","#ffffff,#ffffff"]} className="md:text-[4vh] text-[2vh] font-[300] font-poppins italic">
             Taking content creation to the next level
           </LinearGradient>
           <div className="mt-44">

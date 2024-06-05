@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { LinearGradient } from "react-text-gradients";
 
 
@@ -70,6 +71,10 @@ const stepsData = [
 ]
 
 const Blogs = () => {
+  const [showAll, setShowAll] = useState(false);
+  const maxInitialPoints = 3;
+  const visiblePoints =  showAll? stepsData : stepsData.slice(0, maxInitialPoints);
+  
     return (
         <div className="container mx-auto px-2 -mt-8">
             <h2 className="text-3xl md:text-5xl font-poppins text-[4vh] font-[700] ml-5 mb-[-85px] mt-36">
@@ -86,22 +91,26 @@ const Blogs = () => {
                         </div>
                     </div>
 
-                   <div className="mx-5 mb-36 mt-10 p-6 rounded-lg bg-white text-black rounded-lg bg-white text-black custom-shadow border-4 cursor-pointer from-yellow-500 to-white-600 rounded-[10px]">
-
-                    <h2 className="text-3xl font-poppins font-bold mb-4 text-center">How to Grow on Social Media: 13 Expert Strategies for Building a Massive Online Presence
-</h2>
-                    
-
-                    <div className="list-disc pl-5 space-y-2 ">
-                        {stepsData.map(step => (
+                    <div className="mx-5 mb-36 mt-10 p-6 rounded-lg bg-white text-black custom-shadow border-4 cursor-pointer from-yellow-500 to-white-600 rounded-[10px] relative">
+                    <h2 className="text-3xl font-poppins font-bold mb-4 text-center">
+                      How to Grow on Social Media: 13 Expert Strategies for Building a Massive Online Presence
+                    </h2>
+                    <div className="list-disc pl-5 space-y-2">
+                      {visiblePoints.map(step => (
                         <div key={step.number} className="mb-2">
-                            <span className="inline-block align-middle mr-2 text-xl font-poppins">{step.number}.</span>
-                            <strong className="text-gray-700">{step.title}</strong><br />
-                            <em className="text-gray-600 font-poppins text-md">{step.description}</em>
+                          <span className="inline-block align-middle mr-2 text-xl font-poppins">{step.number}.</span>
+                          <strong className="text-gray-700">{step.title}</strong><br />
+                          <em className="text-gray-600 font-poppins text-md">{step.description}</em>
                         </div>
-                        ))}
+                      ))}
                     </div>
-                    </div>
+                    <button
+                      onClick={() => setShowAll(!showAll)} // Toggle the state
+                      className="relative bottom-0  right-0 left-10 mb-4 mr-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                    >
+                      {showAll? "Show Less" : "Read More"}
+                    </button>
+                  </div>
                 </div>
         </div>
     );
