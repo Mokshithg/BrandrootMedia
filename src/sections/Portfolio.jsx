@@ -267,7 +267,7 @@ function Portfolio({ open, onClose}) {
   }, [savedScrollPosition]);
 
   return (
-    <div className="mx-5 mb-36 min-h-screen bg-black py-6 -mt-20 flex flex-col items-center justify-center sm:py-12" id="portfolio">
+    <div className="mx-5 mb-36 min-h-screen bg-black py-6 -mt-24 flex flex-col items-center justify-center sm:py-12" id="portfolio">
       <h1 className="font-poppins text-3xl md:text-5xl font-poppins text-[4vh] font-[700] mb-8">
         <LinearGradient gradient={["to right", "#fdde00,#ffffff"]}>
           Portfolio

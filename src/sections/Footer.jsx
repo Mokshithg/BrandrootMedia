@@ -5,7 +5,7 @@ export default function Footer() {
     <div id="contactus" className="w-full flex flex-col items-center p-4 bg-black text-white">
       <h1 className="text-3xl md:text-5xl font-poppins font-[700] my-4 text-center w-full">
         Let's{" "}
-        <LinearGradient gradient={["to right", "#fdde00", "#ffffff"]}>
+        <LinearGradient gradient={["to bottom", "#fdde00 ,#ffffff"]}>
           Connect
         </LinearGradient>
       </h1>
