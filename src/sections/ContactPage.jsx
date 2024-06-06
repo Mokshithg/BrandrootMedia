@@ -86,9 +86,9 @@ export default function ContactPage() {
 
       <div className="md:w-[100vh]">
         <h1 className="text-5xl md:text-4xl mt-20 font-medium my-4">Abu Talha</h1>
-        <p className="text-2xl md:text-xl -mt-4 text-white-400 font-kanit">
+        {/* <p className="text-2xl md:text-xl -mt-4 text-white-400 font-kanit">
           Youtube | Instagram
-        </p>
+        </p> */}
         <p className="text-[20px] md:text-2xl my-4 md:my-10 font-light mb-56 md:mb-48">
           As an entrepreneur and content creator, Ayushman has a passion for
           creating exceptional content that resonates with audiences. His

@@ -100,7 +100,7 @@ const Blogs = () => {
                         <div key={step.number} className="mb-2">
                           <span className="inline-block align-middle mr-2 text-xl font-poppins">{step.number}.</span>
                           <strong className="text-gray-700">{step.title}</strong><br />
-                          <em className="text-gray-600 font-poppins text-md">{step.description}</em>
+                          <p className="text-gray-600 font-poppins text-md">{step.description}</p>
                         </div>
                       ))}
                     </div>

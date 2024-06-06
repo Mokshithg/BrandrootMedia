@@ -90,7 +90,7 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="mb-36 -mt-20" id="services">
+    <div className="mb-36 -mt-" id="services">
       <h1 className="text-4xl md:text-[55px] font-poppins text-3xl md:text-6xl font-poppins text-[4vh] font-[700] ml-8 leading-[35px] md:leading-[60px]">
         Here's what <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>we will do for you</LinearGradient>
       </h1>
@@ -101,7 +101,7 @@ export default function Services() {
             navigation={true}
             modules={[Navigation]}
             loop={true} 
-            className="mySwiper py-10 px-[30px]"
+            className="mySwiper py-10 px-[50px] pr-[0px]"
             // className="mySwiper px-30 py-10"
           >
             {more_cards.map((e, i) => (
@@ -117,8 +117,8 @@ export default function Services() {
                 />
               </SwiperSlide>
             ))}
-            {/* <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
-            <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div> */}
+            <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
+            <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div>
           </Swiper>
         </div>
 
