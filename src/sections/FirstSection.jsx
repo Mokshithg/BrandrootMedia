@@ -72,12 +72,16 @@ export default function FirstSection() {
     <div className="text-white md:my-44 my-16 mx-0 mt-0 mb-0">
       <div className="text-3xl md:text-5xl flex md:flex-row flex-col justify-between">
         <div className="">
-          <LinearGradient gradient={["to right","#fdde00,#fdde00"]} className="md:text-[6vh] text-[4vh] font-[700] font-poppins italic">
-            Your One-Stop Solution <br/>for Content Creation Success
-          </LinearGradient><br/>
-          <LinearGradient gradient={["to right","#ffffff,#ffffff"]} className="md:text-[4vh] text-[2vh] font-[300] font-poppins italic">
-            Taking content creation to the next level
-          </LinearGradient>
+          <div className="">
+            <LinearGradient gradient={["to right","#fdde00,#fdde00"]} className="md:text-[6vh] text-[4vh] font-[700] font-poppins">
+              Your One-Stop Solution <br/>for Content Creation Success
+            </LinearGradient><br/>
+            <div className="mt-8">
+                <LinearGradient gradient={["to right","#ffffff,#ffffff"]} className="md:text-[4vh] text-[2vh] font-[300] font-poppins italic">
+                  Taking content creation to the next level
+                </LinearGradient>
+            </div>
+          </div>
           <div className="mt-10 lg:mt-44 ">
             <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3 py-2 border border-transparent text-2xl font-poppins rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 space-x-2">
               Schedule a Call

@@ -90,7 +90,7 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="mb-36" id="services">
+    <div className="mb-36 -mt-20" id="services">
       <h1 className="text-4xl md:text-[55px] font-poppins text-3xl md:text-6xl font-poppins text-[4vh] font-[700] ml-8 leading-[35px] md:leading-[60px]">
         Here's what <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>we will do for you</LinearGradient>
       </h1>

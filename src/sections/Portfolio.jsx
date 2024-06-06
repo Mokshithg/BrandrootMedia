@@ -133,6 +133,8 @@ import { useState, useEffect } from 'react';
 import { LinearGradient } from 'react-text-gradients';
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from '@mui/material';
 import { Link } from 'react-router-dom'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const sections = [
   {
@@ -297,32 +299,6 @@ function Portfolio({ open, onClose}) {
           ))}
         </ul>
       </nav>
-      
-      {/* Pop-up Content */}
-      {/* {popupContent && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10" onClick={() => setPopupContent(null)}>
-          <div className="bg-white p-4 rounded-lg shadow-lg max-w-xs w-full" onClick={(e) => e.stopPropagation()}>
-            <h2 className="text-2xl font-bold mb-4">{popupContent.title}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {popupContent.cards.map((card, index) => (
-                <a
-                  key={index}
-                  href={card.link}
-                  className="card block overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out bg-black text-white transform scale-100 hover:scale-105 transition-transform duration-150"
-                >
-                  <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h3 className="font-semibold text-lg mb-2">{card.title}</h3>
-                    <p className="text-sm">{card.description}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-            <button onClick={() => setPopupContent(null)} className="absolute top-0 right-0 mt-2 mr-2">Close</button>
-          </div>
-        </div>
-      )} */}
-
       <main className="content">
         {sections.map((section, sectionIndex) => (
           <div
@@ -356,9 +332,7 @@ function Portfolio({ open, onClose}) {
           <DialogTitle>{popupContent.title}</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              {/* Your existing JSX for displaying card details remains unchanged */}
             </DialogContentText>
-            {/* Add a link to another page within the dialogue box */}
             <p>
               Want to see more?{' '}
               <Link to="/another-page" style={{ textDecoration: 'none', color: 'inherit' }}>Go to Another Page</Link>
@@ -369,6 +343,12 @@ function Portfolio({ open, onClose}) {
           </DialogActions>
         </Dialog>
       )}
+      <div className="flex justify-center">
+          <a href="https://calendly.com/brandrootmedia/collaborations" target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center px-5 py-2 mt-8 border text-2xl font-poppins rounded-md shadow-sm text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 w-auto">
+              Schedule a Call
+            <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+          </a>
+      </div>
     </div>
   );
 }

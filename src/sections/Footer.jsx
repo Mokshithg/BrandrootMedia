@@ -71,9 +71,13 @@ export default function Footer() {
           <img
             src="https://ik.imagekit.io/7saglhzb5/Brandroot%20media.png?updatedAt=1716214538239"
             alt="Brandroot Media Logo"
-            className="h-36 w-auto ml-20 md:ml-0" // Adjusted for responsiveness
+            className="h-36 w-auto ml-40 md:ml-0" // Adjusted for responsiveness
           />
-          <p className="mt-2 font-poppins text-black">Office Address: 123 Brandroot Street, City, Country</p>
+          <p className="mt-2 font-poppins text-black">
+            <b>Office Address:</b><br/> B-5, Syed Apartment, <br/>
+            Syed Colony, Sir Syed Nagar, <br/>
+            Aligarh, 202002 UP, India
+          </p>
         </a>
       </div>
       <p className="text-2xl -mr-16 font-poppins text-white">BrandRoot Media &copy; 2024. All Rights Reserved</p>
