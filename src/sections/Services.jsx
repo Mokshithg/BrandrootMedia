@@ -122,7 +122,7 @@ export default function Services() {
           // className="mySwiper py-10 px-[50px] pr-[0px]"
         >
           {more_cards.map((e, i) => (
-            <SwiperSlide key={i} className="">
+            <SwiperSlide key={i} className="  ">
               <ServiceCard
                 key={i}
                 h={e.h}
