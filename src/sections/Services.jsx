@@ -111,6 +111,10 @@ export default function Services() {
               slidesPerView: 3,
               slidesPerGroup: 1,
             },
+            580: {
+              slidesPerView: 1,
+              slidesPerGroup:1
+            }
           }}
             navigation={{
               nextEl: ".swiper-button-next",
@@ -118,7 +122,7 @@ export default function Services() {
             }}
           spaceBetween={120}
           modules={[Keyboard, Navigation, Autoplay]}
-          className="mySwiper px-[50px] py-10 -ml-36"
+          className="mySwiper px-[50px] py-10"
           // className="mySwiper py-10 px-[50px] pr-[0px]"
         >
           {more_cards.map((e, i) => (
