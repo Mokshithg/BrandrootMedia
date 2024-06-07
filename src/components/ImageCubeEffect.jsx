@@ -18,7 +18,7 @@ export default function ImageCubeEffect({ images, style }) {
         shadowScale: 0.94,
       }}
       modules={[EffectCube, Pagination, Autoplay]}
-      className="mySwiper"
+      // className="mySwiper"
       loop={true}
       autoplay={{
         delay: 5000,
