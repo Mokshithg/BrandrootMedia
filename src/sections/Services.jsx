@@ -116,9 +116,9 @@ export default function Services() {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
-          spaceBetween={60}
+          spaceBetween={70}
           modules={[Keyboard, Navigation, Autoplay]}
-          className="mySwiper px-[50px] py-10 mr-[40px]"
+          className="mySwiper px-[20px] py-10 mr-[40px]"
           // className="mySwiper py-10 px-[50px] pr-[0px]"
         >
           {more_cards.map((e, i) => (
