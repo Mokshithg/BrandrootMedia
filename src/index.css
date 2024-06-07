@@ -4,6 +4,11 @@
 @tailwind utilities;
 
 
+.mySwiper{
+  padding-left: 60px; /* Increase left padding */
+  padding-right: 60px; /* Increase right padding */
+}
+
 html, body {
     margin: 0px;
     padding: 0px;
@@ -50,9 +55,25 @@ html::-webkit-scrollbar-thumb {
   background-image: linear-gradient(to bottom, #fdde00, #ffffff);
   -webkit-border-radius: 2ex;
 }
-/* .arrow{
+
+.swiper-button-next,.swiper-button-prev {
   color: white;
-} */
+  /* margin-left: 60px; */
+}
+
+.arrow-gap-large {
+  margin-right: 40px;
+}
+
+.arrow-gap-large-reverse {
+  margin-left: 40px;
+}
+
+
+.arrow-right-adjusted{
+  margin-right: 20px;
+}
+
 .image{
   width: 300px;
   border-radius: 25px;

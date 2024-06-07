@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import ServiceCard from "../components/ServiceCard";
 import { LinearGradient } from "react-text-gradients";
 import ClientCard from "../components/ClientCard";
-import { Keyboard, Navigation, Autoplay } from "swiper/modules";
+import { Keyboard, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
@@ -63,63 +64,80 @@ const clients = [
 ];
 
 export default function Services() {
-  const [slidesPerView, setSlidesPerView] = useState(1);
+  // const [slidesPerView, setSlidesPerView] = useState(1);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1280) {
-        setSlidesPerView(3);
-      } else if (window.innerWidth >= 1024) {
-        setSlidesPerView(3);
-      } else if (window.innerWidth >= 768) {
-        setSlidesPerView(3);
-      } else if (window.innerWidth >= 640) {
-        setSlidesPerView(3);
-      } else {
-        setSlidesPerView(1);
-      }
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth >= 1280) {
+  //       setSlidesPerView(3);
+  //     } else if (window.innerWidth >= 1024) {
+  //       setSlidesPerView(3);
+  //     } else if (window.innerWidth >= 768) {
+  //       setSlidesPerView(3);
+  //     } else if (window.innerWidth >= 640) {
+  //       setSlidesPerView(3);
+  //     } else {
+  //       setSlidesPerView(1);
+  //     }
+  //   };
 
-    handleResize();
+  //   handleResize();
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   return (
-    <div className="mb-36 -mt-" id="services">
+    <div className="mb-36" id="services">
       <h1 className="text-4xl md:text-[55px] font-poppins text-3xl md:text-6xl font-poppins text-[4vh] font-[700] ml-8 leading-[35px] md:leading-[60px]">
         Here's what <LinearGradient gradient={["to right", "#fdde00 ,#ffffff"]}>we will do for you</LinearGradient>
       </h1>
       <div className="flex gap-20 my-4 mt-16 gap-x-40 gap-y-40 px-4 md:px-8">
-          <Swiper
-            slidesPerView={slidesPerView}
-            spaceBetween={0}
-            navigation={true}
-            modules={[Navigation]}
-            loop={true} 
-            className="mySwiper py-10 px-[50px] pr-[0px]"
-            // className="mySwiper px-30 py-10"
-          >
-            {more_cards.map((e, i) => (
-              <SwiperSlide key={i} className="arrow">
-                <ServiceCard
-                  key={i}
-                  h={e.h}
-                  p={e.p}
-                  className="flex justify-center items-center w-full h-full mx-2"
-                  autoPlay
-                  muted
-                  controls
-                />
-              </SwiperSlide>
-            ))}
-            <div className="swiper-button-next text-slate-100 animate-bounce-left"></div>
-            <div className="swiper-button-prev text-slate-100 animate-bounce-right"></div>
-          </Swiper>
+        <Swiper
+          loop={true}
+          slidesPerView={4}
+          centeredSlides={false}
+          slidesPerGroupSkip={1}
+          grabCursor={true}
+          keyboard={{
+            enabled: true,
+          }}
+          autoplay={true}
+          breakpoints={{
+            769: {
+              slidesPerView: 3,
+              slidesPerGroup: 1,
+            },
+          }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+          spaceBetween={120}
+          modules={[Keyboard, Navigation, Autoplay]}
+          className="mySwiper px-[50px] py-10 -ml-36"
+          // className="mySwiper py-10 px-[50px] pr-[0px]"
+        >
+          {more_cards.map((e, i) => (
+            <SwiperSlide key={i} className="">
+              <ServiceCard
+                key={i}
+                h={e.h}
+                p={e.p}
+                className="flex justify-center items-center w-full h-full mx-2"
+                autoPlay
+                muted
+                controls
+              />
+            </SwiperSlide>
+          ))}
+          <div className="swiper-button-next text-slate-100 animate-bounce-left" style={{ color: 'white' }}></div>
+          <div className="swiper-button-prev text-slate-100 animate-bounce-right" style={{ color: 'white'}}></div>
+        </Swiper>
+
         </div>
 
           <div className="my-36" id="happyclients">
